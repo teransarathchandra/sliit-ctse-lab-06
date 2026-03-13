@@ -1,0 +1,25 @@
+# Maven / Gradle build outputs
+target/
+**/target/
+*.log
+
+# IntelliJ / Eclipse / VS Code
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+.vscode/
+
+# OS / misc
+.DS_Store
+Thumbs.db
+
+# Docker
+**/docker-compose.override.yml
+
+# Node (if any)
+node_modules/
+
+# Postman exported environments (if added later)
+*.postman_environment.json

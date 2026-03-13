@@ -1,0 +1,71 @@
+{
+  "info": {
+    "name": "CTSE Lab 6 - Kafka Event-Driven Microservices",
+    "_postman_id": "f5d1c6d3-1f1f-4f7b-8d2a-1f2b3c4d5e6f",
+    "description": "Order -> Kafka -> Inventory/Billing flow via API Gateway",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Order (Gateway)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"orderId\": \"ORD-1001\",\n  \"item\": \"Laptop\",\n  \"quantity\": 1\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/orders",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "orders"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Inventory (Gateway)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/inventory",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "inventory"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Billing Invoices (Gateway)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/billing",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "billing"
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    }
+  ]
+}

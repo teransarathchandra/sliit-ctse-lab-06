@@ -1,7 +1,6 @@
 # CTSE Lab 6 – Event-Driven Microservices with Kafka (KRaft)
 
-All Docker builds must run from the **repo root**:
-`.`
+All Docker builds must run from the **repo root** (`sliit-ctse-lab-06/`):
 
 **Build + Run (recommended)**
 ```bash
@@ -62,14 +61,15 @@ docker compose logs -f inventory-service billing-service
 ```
 You should see logs indicating inventory updates and invoice generation after a new order is posted.
 
-![img.png](img.png)
+**Screenshots**
+![Image_1_API](./Image_1_API.png.png)
 
-![img_1.png](img_1.png)
+![Image_2_API](./Image_2_API.png)
 
-![img_2.png](img_2.png)
+![Image_3_API](./Image_3_API.png.png)
 
-![img_3.png](img_3.png)
+![Image_1_Kafka](./Image_1_Kafka.png)
 
-![img_4.png](img_4.png)
+![Image_2_Kafka](./Image_2_Kafka..png)
 
-![img_5.png](img_5.png)
+![Image_3_Kafka](./Image_3_Kafka..png)

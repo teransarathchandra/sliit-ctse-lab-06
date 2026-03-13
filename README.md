@@ -26,6 +26,10 @@ docker build -t api-gateway:latest -f api-gateway/Dockerfile .
 **Postman**
 Import the collection: `CTSE_Lab_6.postman_collection.json` from the repo root.
 
+**Kafka UI**
+Kafka UI is available at `http://localhost:8084` (Provectus Kafka UI).
+Use it to view `order-topic` and verify events are published.
+
 **Kafka Basics (No Prior Experience Needed)**
 Kafka is a message bus. One service sends a message to Kafka; other services read it later. The services do not call each other directly.
 
@@ -57,3 +61,15 @@ Kafka is a message bus. One service sends a message to Kafka; other services rea
 docker compose logs -f inventory-service billing-service
 ```
 You should see logs indicating inventory updates and invoice generation after a new order is posted.
+
+![img.png](img.png)
+
+![img_1.png](img_1.png)
+
+![img_2.png](img_2.png)
+
+![img_3.png](img_3.png)
+
+![img_4.png](img_4.png)
+
+![img_5.png](img_5.png)

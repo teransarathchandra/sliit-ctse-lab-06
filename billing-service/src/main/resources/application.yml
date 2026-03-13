@@ -5,7 +5,7 @@ spring:
   application:
     name: billing-service
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: kafka:9092
     consumer:
       group-id: billing-service
       auto-offset-reset: earliest
